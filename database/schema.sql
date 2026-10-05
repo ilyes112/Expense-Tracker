@@ -1,0 +1,1 @@
+-- Add application tables here once the data model is defined.
