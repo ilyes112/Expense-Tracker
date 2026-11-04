@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
     display: flex;
     min-height: 95vh;
     margin: 20px;
     background-color: #262626;
+  
 }
 
 .sidebar {
@@ -13,25 +20,41 @@ body {
     padding: 20px 15px;
 }
 
-.content {
-    flex: 1;
-    margin: 15px;
-    background-color: #191919;
-    border-radius: 20px;
-}
-
-.profile img {
-    max-width: 110px;
-}
-.profile p{
-    color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
-}
 .profile {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #353535;
+    border-radius: 12px;
+    background-color: #1f1f1f;
+}
+.profile-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid #00d9c0;
+    border-radius: 50%;
+}
+.profile-details {
+    min-width: 0;
+}
+.profile-name {
+    overflow: hidden;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.profile-label {
+    display: block;
+    margin-top: 3px;
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 }
 
 .nav-menu {
@@ -41,14 +64,31 @@ body {
     margin-top: 40px;
 }
 .nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     padding: 14px;
     color: #ddd;
     text-decoration: none;
     border-radius: 8px;
      transition: transform 0.2s ease;
 }
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
 .nav-menu a:hover {
     background: #292929;
     color: #00d9c0;
     transform: scale(1.1);
+}
+
+.content {
+    flex: 1;
+    margin: 15px;
+    background-color: #191919;
+    border: 1px solid #353535;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }

@@ -1,41 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Expense Tracker</title>
 
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/expenses.css">
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/expenses.css" />
     <script src="../js/home.js" defer></script>
-</head>
+  </head>
 
-<body>
-   <aside class="sidebar">
-       <div class="profile">
-          <img src="../assets/images/user-icon.png" alt="Profile picture">
-          <p>ilyes</p>
-       </div>
+  <body>
+    <aside class="sidebar">
+      <div class="profile">
+        <img
+          src="../assets/images/user-icon.png"
+          alt=""
+          class="profile-avatar"
+        />
+        <div class="profile-details">
+          <p class="profile-name">ilyes</p>
+          <span class="profile-label">Account</span>
+        </div>
+      </div>
 
-        <nav class="nav-menu">
-           <a href="home.html" >⌂ Home</a>
-           <a href="Expenses.html">▣ Expenses</a>
-           <a href="Trips.html">✈ Trips</a>
-           <a href="Approvals.html">✓ Approvals</a>
-           <a href="Settings.html">☷ Settings</a>
-           <a href="Support.html">☎ Support</a>
-        </nav>
+      <nav class="nav-menu">
+        <a href="home.html">
+          <img
+            src="../assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="home"
+            class="nav-icon"
+          />
+          <span>Home</span>
+        </a>
 
-      
+        <a href="Expenses.html">
+          <img
+            src="../assets/images/icons/payments_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Expense"
+            class="nav-icon"
+          />
+          <span>Expenses</span>
+        </a>
+
+        <a href="Savings.html">
+          <img
+            src="../assets/images/icons/savings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Savings"
+            class="nav-icon"
+          />
+          <span>Savings</span>
+        </a>
+        <a href="Settings.html">
+          <img
+            src="../assets/images/icons/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Settings"
+            class="nav-icon"
+          />
+          <span>Settings</span>
+        </a>
+        <a href="Support.html">
+          <img
+            src="../assets/images/icons/support_agent_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Support"
+            class="nav-icon"
+          />
+          <span>Support</span>
+        </a>
+      </nav>
     </aside>
 
     <main class="content">
+      <nav id="add-expense-sidebar" class="add-expense-sidebar">
+        <ul>
+          <li>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="0.00" />
+          </li>
+
+          <li>
+            <label for="expense-title">title</label>
+            <input
+              type="text"
+              id="expense-title"
+              name="expense-title"
+              placeholder="e.g. Grocery shopping"
+            />
+          </li>
+
+          <li>
+            <label>date(optional)</label>
+            <input
+              type="date"
+              id="expense-date"
+              name="expense-date"
+              placeholder="YYYY-MM-DD"
+            />
+          </li>
+
+          <li>
+            <label for="expense-description">Description</label>
+            <textarea
+              id="expense-description"
+              name="expense-description"
+              placeholder="Enter a description..."
+            ></textarea>
+          </li>
+
+          <li>
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="">Choose a category</option>
+              <option value="food">Food</option>
+              <option value="transport">Transport</option>
+              <option value="shopping">Shopping</option>
+              <option value="bills">Bills</option>
+            </select>
+          </li>
+
+          <button id="menu-toggle">+ Add expense</button>
+        </ul>
+      </nav>
+
+      <div class="expense-set">
+
+
+        <div class="expense-element">
+          <div class="expense-info">
+            <h3>Grocery Shopping</h3>
+            <p>Food · Nov 04, 2026</p>
+          </div>
+          <span class="expense-amount">-2,500 DA</span>
+            <button class="delete-expense" type="button">
+               <img src="../assets/images/icons/delete_forever_exp-icon.svg">
+            </button>
+        </div>
+
+        <div class="expense-element">
+          <div class="expense-info">
+            <h3>Taxi</h3>
+            <p>Transport · Nov 03, 2026</p>
+          </div>
+          <span class="expense-amount">-500 DA</span>
+            <button class="delete-expense" type="button">
+               <img src="../assets/images/icons/delete_forever_exp-icon.svg">
+            </button>
+        </div>
+
+
+      </div>
 
 
     </main>
-
-
-    
-</body>
+  </body>
 </html>

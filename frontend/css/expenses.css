@@ -1,0 +1,215 @@
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+    min-height: calc(95vh - 30px);
+    padding: 24px;
+}
+
+#add-expense-sidebar {
+    display: flex;
+    flex: 0 0 min(100%, 440px);
+    align-self: stretch;
+    padding: 32px;
+    background: #262626;
+    border: 1px solid #353535;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+#add-expense-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    list-style: none;
+}
+
+#add-expense-sidebar li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#add-expense-sidebar label {
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+#add-expense-sidebar input,
+#add-expense-sidebar textarea,
+#add-expense-sidebar select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    color: #ddd;
+    background-color: #191919;
+    border: 1px solid #353535;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#expense-description {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#add-expense-sidebar input::placeholder {
+    color: #999;
+}
+
+#add-expense-sidebar input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+#add-expense-sidebar input[type="number"]::-webkit-inner-spin-button,
+#add-expense-sidebar input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+#add-expense-sidebar input:focus,
+#add-expense-sidebar textarea:focus,
+#add-expense-sidebar select:focus {
+    border-color: #00d9c0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 217, 192, 0.15);
+}
+
+#add-expense-sidebar select {
+    cursor: pointer;
+}
+
+#menu-toggle {
+    min-height: 48px;
+    padding: 0 18px;
+    color: #191919;
+    background: #00d9c0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#menu-toggle:hover {
+    background: #00d9c0;
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+#menu-toggle:focus-visible {
+    outline: 3px solid rgba(0, 217, 192, 0.35);
+    outline-offset: 3px;
+}
+
+.expense-set {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    order: -1;
+    min-width: 0;
+    gap: 12px;
+    padding: 20px;
+}
+
+.expense-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #242424;
+    border: 1px solid #353535;
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.expense-info h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.expense-info p {
+    color: #888;
+    font-size: 13px;
+}
+
+.expense-amount {
+    color: #00d9c0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px;
+        min-height: calc(95vh - 30px);
+    }
+
+    #add-expense-sidebar {
+        width: 100%;
+        flex: none;
+        padding: 24px;
+    }
+
+    .expense-set {
+        order: 1;
+        width: 100%;
+    }
+}
+.expense-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.delete-expense {
+    display: inline-flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: #191919;
+    border: 1px solid #353535;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-expense img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transition: filter 0.2s ease;
+}
+
+.delete-expense:hover {
+    background: rgba(255, 77, 77, 0.12);
+    border-color: #ff4d4d;
+    transform: translateY(-1px);
+}
+
+.delete-expense:hover img {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(86%) saturate(1987%) hue-rotate(326deg) brightness(101%) contrast(101%);
+}
+
+.delete-expense:focus-visible {
+    outline: 2px solid #ff4d4d;
+    outline-offset: 3px;
+}
