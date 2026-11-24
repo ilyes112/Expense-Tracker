@@ -91,12 +91,12 @@
           </li>
 
           <li>
-            <label>date(optional)</label>
+            <label>date (optional)</label>
             <input
               type="date"
               id="expense-date"
               name="expense-date"
-              placeholder="YYYY-MM-DD"
+              
             />
           </li>
 
