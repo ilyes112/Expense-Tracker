@@ -1,3 +1,4 @@
+<?php ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -74,54 +75,51 @@
 
     <main class="content">
       <nav id="add-expense-sidebar" class="add-expense-sidebar">
-        <ul>
-          <li>
-            <label for="amount">Amount</label>
-            <input type="number" id="amount" name="amount" placeholder="0.00" />
-          </li>
+        <form id="expense-form" name="expenseForm" method="POST">
+          <ul>
+            <li>
+              <label for="amount">Amount</label>
+              <input type="number" id="amount" name="amount" placeholder="0.00" />
+            </li>
 
-          <li>
-            <label for="expense-title">title</label>
-            <input
-              type="text"
-              id="expense-title"
-              name="expense-title"
-              placeholder="e.g. Grocery shopping"
-            />
-          </li>
+            <li>
+              <label for="expense-title">title</label>
+              <input
+                type="text"
+                id="expense-title"
+                name="expense-title"
+                placeholder="e.g. Grocery shopping"
+              />
+            </li>
 
-          <li>
-            <label>date (optional)</label>
-            <input
-              type="date"
-              id="expense-date"
-              name="expense-date"
-              
-            />
-          </li>
+            <li>
+              <label for="expense-date">date (optional)</label>
+              <input type="date" id="expense-date" name="expense-date" />
+            </li>
 
-          <li>
-            <label for="expense-description">Description</label>
-            <textarea
-              id="expense-description"
-              name="expense-description"
-              placeholder="Enter a description..."
-            ></textarea>
-          </li>
+            <li>
+              <label for="expense-description">Description</label>
+              <textarea
+                id="expense-description"
+                name="expense-description"
+                placeholder="Enter a description..."
+              ></textarea>
+            </li>
 
-          <li>
-            <label for="category">Category</label>
-            <select id="category" name="category">
-              <option value="">Choose a category</option>
-              <option value="food">Food</option>
-              <option value="transport">Transport</option>
-              <option value="shopping">Shopping</option>
-              <option value="bills">Bills</option>
-            </select>
-          </li>
+            <li>
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="">Choose a category</option>
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+              </select>
+            </li>
+          </ul>
 
-          <button id="menu-toggle">+ Add expense</button>
-        </ul>
+          <button id="menu-toggle" type="submit">+ Add expense</button>
+        </form>
       </nav>
 
       <div class="expense-set">

@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,7 +72,7 @@
     <main class="content">
       <section id="add-savings-sidebar" aria-labelledby="add-savings-title">
         <h1 id="add-savings-title">Create a savings goal</h1>
-        <form>
+        <form id="savings-form" name="savingsForm" method="POST">
           <div class="savings-field">
             <label for="savings-title">Goal title</label>
             <input
@@ -116,7 +117,7 @@
             <input type="date" id="target-date" name="target_date" />
           </div>
 
-          <button class="savings-submit" type="button">+ Add savings goal</button>
+          <button class="savings-submit" type="submit">+ Add savings goal</button>
         </form>
       </section>
 
