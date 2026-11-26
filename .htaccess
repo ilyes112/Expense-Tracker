@@ -1,0 +1,6 @@
+RewriteEngine On
+# If the requested URL is not an actual physical file or folder...
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# ...send all traffic to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

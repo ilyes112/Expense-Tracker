@@ -10,6 +10,6 @@ class User
         $this->db = $db;
     }
 
-    public function LogIn(string $email, )
+    
 
 }

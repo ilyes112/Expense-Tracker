@@ -27,7 +27,7 @@
       </div>
 
       <nav class="nav-menu">
-        <a href="home.html">
+        <a href="home.php">
           <img
             src="../assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
@@ -36,7 +36,7 @@
           <span>Home</span>
         </a>
 
-        <a href="Expenses.html" aria-current="page">
+        <a href="Expenses.php" aria-current="page">
           <img
             src="../assets/images/icons/payments_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
@@ -45,7 +45,7 @@
           <span>Expenses</span>
         </a>
 
-        <a href="Savings.html">
+        <a href="Savings.php">
           <img
             src="../assets/images/icons/savings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
@@ -54,7 +54,7 @@
           <span>Savings</span>
         </a>
 
-        <a href="Settings.html">
+        <a href="Settings.php">
           <img
             src="../assets/images/icons/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
@@ -62,7 +62,7 @@
           />
           <span>Settings</span>
         </a>
-        <a href="Support.html">
+        <a href="Support.php">
           <img
             src="../assets/images/icons/support_agent_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
